@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie Photo Interactive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        #image {
+            width: 500px;
+            height: 300px;
+            border: 2px solid #ccc;
+            margin-bottom: 20px;
+            background-color: #f0f0f0;
+            background-image: url('');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+        
+        .gallery {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .gallery img {
+            width: 150px;
+            height: 100px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        
+        .gallery img:hover {
+            border-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galerie Photo Interactive</h1>
+    
+    <div id="image">
+        Survolez une image ci-dessous pour l'afficher ici
+    </div>
+    
+    <div class="gallery">
+        <img src="pic1.jpg" 
+             alt="oiseau" 
+             class="preview"
+             onmouseover="upDate(this)" 
+             onmouseout="unDo()">
+        
+        <img src="pic2.jpg" 
+             alt="cameleon" 
+             class="preview"
+             onmouseover="upDate(this)" 
+             onmouseout="unDo()">
+        
+        <img src="pic3.jpg" 
+             alt="tigre" 
+             class="preview"
+             onmouseover="upDate(this)" 
+             onmouseout="unDo()">
+        
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
